@@ -1,5 +1,5 @@
 {
-  "name": "helloworld",
+  "name": "mock-server-koa2",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -1,6 +1,6 @@
 # mock-server-koa2
 
-A simple server with Koa2 for testing
+A simple server for testing based on [Koa2](https://koajs.com/) and [koa-generator](https://www.npmjs.com/package/koa-generator)
 
 ## Getting Started
 
