@@ -10,6 +10,7 @@ specifiers:
   koa-onerror: ^4.1.0
   koa-router: ^7.4.0
   koa-static: ^5.0.0
+  koa2-cors: ^2.0.6
   nodemon: ^1.19.1
   pug: ^2.0.3
 
@@ -23,6 +24,7 @@ dependencies:
   koa-onerror: registry.npmjs.org/koa-onerror/4.1.0
   koa-router: registry.npmjs.org/koa-router/7.4.0
   koa-static: registry.npmjs.org/koa-static/5.0.0
+  koa2-cors: registry.npmjs.org/koa2-cors/2.0.6
   pug: registry.npmjs.org/pug/2.0.4
 
 devDependencies:
@@ -1624,6 +1626,13 @@ packages:
       vary: registry.npmjs.org/vary/1.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  registry.npmjs.org/koa2-cors/2.0.6:
+    resolution: {integrity: sha512-JRCcSM4lamM+8kvKGDKlesYk2ASrmSTczDtGUnIadqMgnHU4Ct5Gw7Bxt3w3m6d6dy3WN0PU4oMP43HbddDEWg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/koa2-cors/-/koa2-cors-2.0.6.tgz}
+    name: koa2-cors
+    version: 2.0.6
+    engines: {node: '>= 7.6.0'}
     dev: false
 
   registry.npmjs.org/latest-version/3.1.0:

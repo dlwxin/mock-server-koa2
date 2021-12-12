@@ -56,7 +56,7 @@ curl --header "Content-Type: application/json" \
 
 // https://stackoverflow.com/questions/18314796/couchdb-curl-windows-command-line-invalid-json
 router.post('/login', ctx => {
-  const { username, password } = ctx.params
+  const { username, password } = ctx.request.body
   ctx.body = {
     username,
     password,

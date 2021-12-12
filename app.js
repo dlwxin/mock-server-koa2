@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const app = new Koa()
 const json = require('koa-json')
+const cors = require('koa2-cors')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
@@ -18,6 +19,7 @@ app.use(
   })
 )
 app.use(json())
+app.use(cors())
 app.use(logger())
 app.use(require('koa-static')(__dirname + '/public'))
 
