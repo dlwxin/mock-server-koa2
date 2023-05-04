@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   debug: ^4.1.1
@@ -31,6 +31,60 @@ devDependencies:
   nodemon: registry.npmjs.org/nodemon/1.19.4
 
 packages:
+
+  /@types/keyv/3.1.4:
+    resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
+    dependencies:
+      '@types/node': 18.16.3
+    dev: true
+
+  /@types/node/18.16.3:
+    resolution: {integrity: sha512-OPs5WnnT1xkCBiuQrZA4+YAV4HEJejmHneyraIaxsbev5yCEr6KMwINNFP9wQeFIw8FWcoTqF3vQsa5CDaI+8Q==}
+    dev: true
+
+  /@types/responselike/1.0.0:
+    resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
+    dependencies:
+      '@types/node': 18.16.3
+    dev: true
+
+  /bindings/1.5.0:
+    resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
+    dependencies:
+      file-uri-to-path: 1.0.0
+    dev: true
+    optional: true
+
+  /file-uri-to-path/1.0.0:
+    resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /fsevents/1.2.13:
+    resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
+    engines: {node: '>= 4.0'}
+    os: [darwin]
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+    requiresBuild: true
+    dependencies:
+      bindings: 1.5.0
+      nan: 2.15.0
+    dev: true
+    optional: true
+
+  /nan/2.15.0:
+    resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /uglify-to-browserify/1.0.2:
+    resolution: {integrity: sha512-vb2s1lYx2xBtUgy+ta+b2J/GLVUR+wmpINwHePmPRhOsIVCG2wDzKJ0n14GslH1BifsqVzSOwQhRaCAsZ/nI4Q==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   registry.npmjs.org/@types/babel-types/7.0.11:
     resolution: {integrity: sha512-pkPtJUUY+Vwv6B1inAz55rQvivClHJxc9aVEPPmaq2cbyeMLCiDpbKpcKyX4LAwpNGi+SHBv0tHv6+0gXv0P2A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/babel-types/-/babel-types-7.0.11.tgz}
@@ -126,13 +180,16 @@ packages:
     version: 1.3.0
     dev: false
 
-  registry.npmjs.org/anymatch/2.0.0:
+  registry.npmjs.org/anymatch/2.0.0_supports-color@5.5.0:
     resolution: {integrity: sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/anymatch/-/anymatch-2.0.0.tgz}
+    id: registry.npmjs.org/anymatch/2.0.0
     name: anymatch
     version: 2.0.0
     dependencies:
-      micromatch: registry.npmjs.org/micromatch/3.1.10
+      micromatch: registry.npmjs.org/micromatch/3.1.10_supports-color@5.5.0
       normalize-path: registry.npmjs.org/normalize-path/2.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/arr-diff/4.0.0:
@@ -245,16 +302,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  registry.npmjs.org/bindings/1.5.0:
-    resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz}
-    name: bindings
-    version: 1.5.0
-    requiresBuild: true
-    dependencies:
-      file-uri-to-path: registry.npmjs.org/file-uri-to-path/1.0.0
-    dev: true
-    optional: true
-
   registry.npmjs.org/boxen/1.3.0:
     resolution: {integrity: sha512-TNPjfTr432qx7yOjQyaXm3dSR0MH9vXp7eT1BFSl/C51g+EFnOR9hTg1IreahGBmDNCehscshe45f+C1TBZbLw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/boxen/-/boxen-1.3.0.tgz}
     name: boxen
@@ -279,8 +326,9 @@ packages:
       concat-map: registry.npmjs.org/concat-map/0.0.1
     dev: true
 
-  registry.npmjs.org/braces/2.3.2:
+  registry.npmjs.org/braces/2.3.2_supports-color@5.5.0:
     resolution: {integrity: sha512-aNdbnj9P8PjdXU4ybaWLK2IF3jc/EoDYbC7AazW6to3TRsfXxscC9UXOB5iDiEQrkyIbWp2SLQda4+QAa7nc3w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/braces/-/braces-2.3.2.tgz}
+    id: registry.npmjs.org/braces/2.3.2
     name: braces
     version: 2.3.2
     engines: {node: '>=0.10.0'}
@@ -291,10 +339,12 @@ packages:
       fill-range: registry.npmjs.org/fill-range/4.0.0
       isobject: registry.npmjs.org/isobject/3.0.1
       repeat-element: registry.npmjs.org/repeat-element/1.1.4
-      snapdragon: registry.npmjs.org/snapdragon/0.8.2
+      snapdragon: registry.npmjs.org/snapdragon/0.8.2_supports-color@5.5.0
       snapdragon-node: registry.npmjs.org/snapdragon-node/2.1.1
       split-string: registry.npmjs.org/split-string/3.1.0
       to-regex: registry.npmjs.org/to-regex/3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/bytes/3.1.1:
@@ -389,25 +439,28 @@ packages:
       is-regex: registry.npmjs.org/is-regex/1.1.4
     dev: false
 
-  registry.npmjs.org/chokidar/2.1.8:
+  registry.npmjs.org/chokidar/2.1.8_supports-color@5.5.0:
     resolution: {integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/chokidar/-/chokidar-2.1.8.tgz}
+    id: registry.npmjs.org/chokidar/2.1.8
     name: chokidar
     version: 2.1.8
     deprecated: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
     dependencies:
-      anymatch: registry.npmjs.org/anymatch/2.0.0
+      anymatch: registry.npmjs.org/anymatch/2.0.0_supports-color@5.5.0
       async-each: registry.npmjs.org/async-each/1.0.3
-      braces: registry.npmjs.org/braces/2.3.2
+      braces: registry.npmjs.org/braces/2.3.2_supports-color@5.5.0
       glob-parent: registry.npmjs.org/glob-parent/3.1.0
       inherits: registry.npmjs.org/inherits/2.0.4
       is-binary-path: registry.npmjs.org/is-binary-path/1.0.1
       is-glob: registry.npmjs.org/is-glob/4.0.3
       normalize-path: registry.npmjs.org/normalize-path/3.0.0
       path-is-absolute: registry.npmjs.org/path-is-absolute/1.0.1
-      readdirp: registry.npmjs.org/readdirp/2.2.1
+      readdirp: registry.npmjs.org/readdirp/2.2.1_supports-color@5.5.0
       upath: registry.npmjs.org/upath/1.2.0
     optionalDependencies:
-      fsevents: registry.npmjs.org/fsevents/1.2.13
+      fsevents: 1.2.13
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/ci-info/1.6.0:
@@ -609,20 +662,48 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  registry.npmjs.org/debug/2.6.9:
+  registry.npmjs.org/debug/2.6.9_supports-color@5.5.0:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/debug/-/debug-2.6.9.tgz}
+    id: registry.npmjs.org/debug/2.6.9
     name: debug
     version: 2.6.9
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: registry.npmjs.org/ms/2.0.0
+      supports-color: registry.npmjs.org/supports-color/5.5.0
     dev: true
 
   registry.npmjs.org/debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/debug/-/debug-3.2.7.tgz}
     name: debug
     version: 3.2.7
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: registry.npmjs.org/ms/2.1.3
+    dev: false
+
+  registry.npmjs.org/debug/3.2.7_supports-color@5.5.0:
+    resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/debug/-/debug-3.2.7.tgz}
+    id: registry.npmjs.org/debug/3.2.7
+    name: debug
+    version: 3.2.7
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: registry.npmjs.org/ms/2.1.3
+      supports-color: registry.npmjs.org/supports-color/5.5.0
+    dev: true
 
   registry.npmjs.org/debug/4.3.3:
     resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/debug/-/debug-4.3.3.tgz}
@@ -787,19 +868,22 @@ packages:
       strip-eof: registry.npmjs.org/strip-eof/1.0.0
     dev: true
 
-  registry.npmjs.org/expand-brackets/2.1.4:
+  registry.npmjs.org/expand-brackets/2.1.4_supports-color@5.5.0:
     resolution: {integrity: sha1-t3c14xXOMPa27/D4OwQVGiJEliI=, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/expand-brackets/-/expand-brackets-2.1.4.tgz}
+    id: registry.npmjs.org/expand-brackets/2.1.4
     name: expand-brackets
     version: 2.1.4
     engines: {node: '>=0.10.0'}
     dependencies:
-      debug: registry.npmjs.org/debug/2.6.9
+      debug: registry.npmjs.org/debug/2.6.9_supports-color@5.5.0
       define-property: registry.npmjs.org/define-property/0.2.5
       extend-shallow: registry.npmjs.org/extend-shallow/2.0.1
       posix-character-classes: registry.npmjs.org/posix-character-classes/0.1.1
       regex-not: registry.npmjs.org/regex-not/1.0.2
-      snapdragon: registry.npmjs.org/snapdragon/0.8.2
+      snapdragon: registry.npmjs.org/snapdragon/0.8.2_supports-color@5.5.0
       to-regex: registry.npmjs.org/to-regex/3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/extend-shallow/2.0.1:
@@ -821,29 +905,24 @@ packages:
       is-extendable: registry.npmjs.org/is-extendable/1.0.1
     dev: true
 
-  registry.npmjs.org/extglob/2.0.4:
+  registry.npmjs.org/extglob/2.0.4_supports-color@5.5.0:
     resolution: {integrity: sha512-Nmb6QXkELsuBr24CJSkilo6UHHgbekK5UiZgfE6UHD3Eb27YC6oD+bhcT+tJ6cl8dmsgdQxnWlcry8ksBIBLpw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/extglob/-/extglob-2.0.4.tgz}
+    id: registry.npmjs.org/extglob/2.0.4
     name: extglob
     version: 2.0.4
     engines: {node: '>=0.10.0'}
     dependencies:
       array-unique: registry.npmjs.org/array-unique/0.3.2
       define-property: registry.npmjs.org/define-property/1.0.0
-      expand-brackets: registry.npmjs.org/expand-brackets/2.1.4
+      expand-brackets: registry.npmjs.org/expand-brackets/2.1.4_supports-color@5.5.0
       extend-shallow: registry.npmjs.org/extend-shallow/2.0.1
       fragment-cache: registry.npmjs.org/fragment-cache/0.2.1
       regex-not: registry.npmjs.org/regex-not/1.0.2
-      snapdragon: registry.npmjs.org/snapdragon/0.8.2
+      snapdragon: registry.npmjs.org/snapdragon/0.8.2_supports-color@5.5.0
       to-regex: registry.npmjs.org/to-regex/3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
-
-  registry.npmjs.org/file-uri-to-path/1.0.0:
-    resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz}
-    name: file-uri-to-path
-    version: 1.0.0
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.npmjs.org/fill-range/4.0.0:
     resolution: {integrity: sha1-1USBHUKPmOsGpj3EAtJAPDKMOPc=, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/fill-range/-/fill-range-4.0.0.tgz}
@@ -879,20 +958,6 @@ packages:
     version: 0.5.2
     engines: {node: '>= 0.6'}
     dev: false
-
-  registry.npmjs.org/fsevents/1.2.13:
-    resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz}
-    name: fsevents
-    version: 1.2.13
-    engines: {node: '>= 4.0'}
-    os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
-    requiresBuild: true
-    dependencies:
-      bindings: registry.npmjs.org/bindings/1.5.0
-      nan: registry.npmjs.org/nan/2.15.0
-    dev: true
-    optional: true
 
   registry.npmjs.org/function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz}
@@ -948,6 +1013,8 @@ packages:
     version: 6.7.1
     engines: {node: '>=4'}
     dependencies:
+      '@types/keyv': 3.1.4
+      '@types/responselike': 1.0.0
       create-error-class: registry.npmjs.org/create-error-class/3.0.2
       duplexer3: registry.npmjs.org/duplexer3/0.1.4
       get-stream: registry.npmjs.org/get-stream/3.0.0
@@ -1568,6 +1635,8 @@ packages:
       methods: registry.npmjs.org/methods/1.1.2
       path-to-regexp: registry.npmjs.org/path-to-regexp/1.8.0
       urijs: registry.npmjs.org/urijs/1.19.7
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   registry.npmjs.org/koa-send/5.0.1:
@@ -1719,25 +1788,28 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  registry.npmjs.org/micromatch/3.1.10:
+  registry.npmjs.org/micromatch/3.1.10_supports-color@5.5.0:
     resolution: {integrity: sha512-MWikgl9n9M3w+bpsY3He8L+w9eF9338xRl8IAO5viDizwSzziFEyUzo2xrrloB64ADbTf8uA8vRqqttDTOmccg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/micromatch/-/micromatch-3.1.10.tgz}
+    id: registry.npmjs.org/micromatch/3.1.10
     name: micromatch
     version: 3.1.10
     engines: {node: '>=0.10.0'}
     dependencies:
       arr-diff: registry.npmjs.org/arr-diff/4.0.0
       array-unique: registry.npmjs.org/array-unique/0.3.2
-      braces: registry.npmjs.org/braces/2.3.2
+      braces: registry.npmjs.org/braces/2.3.2_supports-color@5.5.0
       define-property: registry.npmjs.org/define-property/2.0.2
       extend-shallow: registry.npmjs.org/extend-shallow/3.0.2
-      extglob: registry.npmjs.org/extglob/2.0.4
+      extglob: registry.npmjs.org/extglob/2.0.4_supports-color@5.5.0
       fragment-cache: registry.npmjs.org/fragment-cache/0.2.1
       kind-of: registry.npmjs.org/kind-of/6.0.3
-      nanomatch: registry.npmjs.org/nanomatch/1.2.13
+      nanomatch: registry.npmjs.org/nanomatch/1.2.13_supports-color@5.5.0
       object.pick: registry.npmjs.org/object.pick/1.3.0
       regex-not: registry.npmjs.org/regex-not/1.0.2
-      snapdragon: registry.npmjs.org/snapdragon/0.8.2
+      snapdragon: registry.npmjs.org/snapdragon/0.8.2_supports-color@5.5.0
       to-regex: registry.npmjs.org/to-regex/3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/mime-db/1.51.0:
@@ -1797,16 +1869,9 @@ packages:
     name: ms
     version: 2.1.3
 
-  registry.npmjs.org/nan/2.15.0:
-    resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/nan/-/nan-2.15.0.tgz}
-    name: nan
-    version: 2.15.0
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmjs.org/nanomatch/1.2.13:
+  registry.npmjs.org/nanomatch/1.2.13_supports-color@5.5.0:
     resolution: {integrity: sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/nanomatch/-/nanomatch-1.2.13.tgz}
+    id: registry.npmjs.org/nanomatch/1.2.13
     name: nanomatch
     version: 1.2.13
     engines: {node: '>=0.10.0'}
@@ -1820,8 +1885,10 @@ packages:
       kind-of: registry.npmjs.org/kind-of/6.0.3
       object.pick: registry.npmjs.org/object.pick/1.3.0
       regex-not: registry.npmjs.org/regex-not/1.0.2
-      snapdragon: registry.npmjs.org/snapdragon/0.8.2
+      snapdragon: registry.npmjs.org/snapdragon/0.8.2_supports-color@5.5.0
       to-regex: registry.npmjs.org/to-regex/3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/negotiator/0.6.2:
@@ -1839,8 +1906,8 @@ packages:
     hasBin: true
     requiresBuild: true
     dependencies:
-      chokidar: registry.npmjs.org/chokidar/2.1.8
-      debug: registry.npmjs.org/debug/3.2.7
+      chokidar: registry.npmjs.org/chokidar/2.1.8_supports-color@5.5.0
+      debug: registry.npmjs.org/debug/3.2.7_supports-color@5.5.0
       ignore-by-default: registry.npmjs.org/ignore-by-default/1.0.1
       minimatch: registry.npmjs.org/minimatch/3.0.4
       pstree.remy: registry.npmjs.org/pstree.remy/1.1.8
@@ -2229,15 +2296,18 @@ packages:
       string_decoder: registry.npmjs.org/string_decoder/1.1.1
       util-deprecate: registry.npmjs.org/util-deprecate/1.0.2
 
-  registry.npmjs.org/readdirp/2.2.1:
+  registry.npmjs.org/readdirp/2.2.1_supports-color@5.5.0:
     resolution: {integrity: sha512-1JU/8q+VgFZyxwrJ+SVIOsh+KywWGpds3NTqikiKpDMZWScmAYyKIgqkO+ARvNWJfXeXR1zxz7aHF4u4CyH6vQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/readdirp/-/readdirp-2.2.1.tgz}
+    id: registry.npmjs.org/readdirp/2.2.1
     name: readdirp
     version: 2.2.1
     engines: {node: '>=0.10'}
     dependencies:
       graceful-fs: registry.npmjs.org/graceful-fs/4.2.8
-      micromatch: registry.npmjs.org/micromatch/3.1.10
+      micromatch: registry.npmjs.org/micromatch/3.1.10_supports-color@5.5.0
       readable-stream: registry.npmjs.org/readable-stream/2.3.7
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/regenerator-runtime/0.11.1:
@@ -2451,20 +2521,23 @@ packages:
       kind-of: registry.npmjs.org/kind-of/3.2.2
     dev: true
 
-  registry.npmjs.org/snapdragon/0.8.2:
+  registry.npmjs.org/snapdragon/0.8.2_supports-color@5.5.0:
     resolution: {integrity: sha512-FtyOnWN/wCHTVXOMwvSv26d+ko5vWlIDD6zoUJ7LW8vh+ZBC8QdljveRP+crNrtBwioEUWy/4dMtbBjA4ioNlg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/snapdragon/-/snapdragon-0.8.2.tgz}
+    id: registry.npmjs.org/snapdragon/0.8.2
     name: snapdragon
     version: 0.8.2
     engines: {node: '>=0.10.0'}
     dependencies:
       base: registry.npmjs.org/base/0.11.2
-      debug: registry.npmjs.org/debug/2.6.9
+      debug: registry.npmjs.org/debug/2.6.9_supports-color@5.5.0
       define-property: registry.npmjs.org/define-property/0.2.5
       extend-shallow: registry.npmjs.org/extend-shallow/2.0.1
       map-cache: registry.npmjs.org/map-cache/0.2.2
       source-map: registry.npmjs.org/source-map/0.5.7
       source-map-resolve: registry.npmjs.org/source-map-resolve/0.5.3
       use: registry.npmjs.org/use/3.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmjs.org/source-map-resolve/0.5.3:
@@ -2691,16 +2764,8 @@ packages:
       source-map: registry.npmjs.org/source-map/0.5.7
       yargs: registry.npmjs.org/yargs/3.10.0
     optionalDependencies:
-      uglify-to-browserify: registry.npmjs.org/uglify-to-browserify/1.0.2
+      uglify-to-browserify: 1.0.2
     dev: false
-
-  registry.npmjs.org/uglify-to-browserify/1.0.2:
-    resolution: {integrity: sha1-bgkk1r2mta/jSeOabWMoUKD4grc=, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz}
-    name: uglify-to-browserify
-    version: 1.0.2
-    requiresBuild: true
-    dev: false
-    optional: true
 
   registry.npmjs.org/undefsafe/2.0.5:
     resolution: {integrity: sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/undefsafe/-/undefsafe-2.0.5.tgz}
