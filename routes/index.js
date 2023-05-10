@@ -9,6 +9,7 @@ router.get('/', async (ctx, next) => {
 router.get('/json', async (ctx, next) => {
   ctx.body = {
     msg: 'Hello World!',
+    timestamp: Date.now(),
   }
 })
 
@@ -17,6 +18,7 @@ router.get('/list/:id', async ctx => {
   const { id } = ctx.params
   ctx.body = {
     id,
+    timestamp: Date.now(),
   }
 })
 
@@ -27,6 +29,7 @@ router.get('/search', async ctx => {
   ctx.body = {
     id,
     num,
+    timestamp: Date.now(),
   }
 })
 
@@ -36,6 +39,7 @@ router.put('/:id', async ctx => {
   ctx.body = ctx.body = {
     method: 'PUT',
     id,
+    timestamp: Date.now(),
   }
 })
 
@@ -45,6 +49,7 @@ router.del('/:id', async ctx => {
   ctx.body = ctx.body = {
     method: 'DELETE',
     id,
+    timestamp: Date.now(),
   }
 })
 
@@ -61,6 +66,7 @@ router.post('/login', ctx => {
     username,
     password,
     msg: 'Hello World!',
+    timestamp: Date.now(),
   }
 })
 
