@@ -25,3 +25,13 @@ pnpm start
 ```
 
 `mock-server-koa2`listening at http://localhost:3000/ by default.
+
+## Docker
+
+```shell
+docker build -t mock-server-koa2 .
+
+docker run --name mock-server-koa2 -p 3000:3000 -d mock-server-koa2
+
+curl "http://localhost:3000/"
+```
