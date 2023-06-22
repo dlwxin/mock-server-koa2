@@ -6,6 +6,11 @@ const getIpAddress = ip => {
   return address
 }
 
+const getIpFromHttpRequest = req => {
+  return getIpAddress(req.headers['x-forwarded-for'] || req.ip)
+}
+
 module.exports = {
   getIpAddress,
+  getIpFromHttpRequest,
 }
