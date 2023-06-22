@@ -1,5 +1,7 @@
 const router = require('koa-router')()
 
+const ipUtil = require('../utils/ipUtil')
+
 // curl http://localhost:3000
 router.get('/', async (ctx, next) => {
   ctx.body = 'Hello Koa2!'
@@ -10,6 +12,7 @@ router.get('/json', async (ctx, next) => {
   ctx.body = {
     msg: 'Hello World!',
     timestamp: Date.now(),
+    origin: ipUtil.getIpAddress(ctx.request.ip),
   }
 })
 
@@ -19,6 +22,7 @@ router.get('/list/:id', async ctx => {
   ctx.body = {
     id,
     timestamp: Date.now(),
+    origin: ipUtil.getIpAddress(ctx.request.ip),
   }
 })
 
@@ -30,6 +34,7 @@ router.get('/search', async ctx => {
     id,
     num,
     timestamp: Date.now(),
+    origin: ipUtil.getIpAddress(ctx.request.ip),
   }
 })
 
@@ -40,6 +45,7 @@ router.put('/:id', async ctx => {
     method: 'PUT',
     id,
     timestamp: Date.now(),
+    origin: ipUtil.getIpAddress(ctx.request.ip),
   }
 })
 
@@ -50,6 +56,7 @@ router.del('/:id', async ctx => {
     method: 'DELETE',
     id,
     timestamp: Date.now(),
+    origin: ipUtil.getIpAddress(ctx.request.ip),
   }
 })
 
@@ -67,6 +74,7 @@ router.post('/login', ctx => {
     password,
     msg: 'Hello World!',
     timestamp: Date.now(),
+    origin: ipUtil.getIpAddress(ctx.request.ip),
   }
 })
 
