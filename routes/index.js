@@ -62,6 +62,7 @@ router.del('/:id', async ctx => {
 
 /*
 curl --header "Content-Type: application/json" \
+  --header "Authorization: Bearer TEST_API_KEY" \
   --data '{"username":"admin","password":"admin"}' \
   http://localhost:3000/login
 */
@@ -69,12 +70,30 @@ curl --header "Content-Type: application/json" \
 // https://stackoverflow.com/questions/18314796/couchdb-curl-windows-command-line-invalid-json
 router.post('/login', ctx => {
   const { username, password } = ctx.request.body
+  const allHeaders = ctx.request.headers
+  // const { authorization } = ctx.request.headers
+
   ctx.body = {
     username,
     password,
     msg: 'Hello World!',
     timestamp: Date.now(),
     origin: ipUtil.getIpFromHttpRequest(ctx.request),
+    headers: allHeaders,
+  }
+})
+
+/*
+curl -X POST http://localhost:3000/headers \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer TEST_API_KEY"
+*/
+router.post('/headers', ctx => {
+  const allHeaders = ctx.request.headers
+  // const { authorization } = ctx.request.headers
+
+  ctx.body = {
+    headers: allHeaders,
   }
 })
 
